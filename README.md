@@ -6,7 +6,7 @@
 
 This is a short "step by step" guide that helps to prevent / fix some common errors during WSL installation.
 
-This document was written as a useful note due to lack of comprehensive and straightforward instructions. As we all know, Microsoft is quite huge corp having different dev-teams working separately, thus if people still facing issues with WSL installation since so many years, the underlying cause is definitely related to subproducts isolation and bad cooperation between dev-teams. You'll see for yourself that security team (Windows Defender) and WSL team may have quite bad collaboration during releases, and this guide prooves this fact.
+This document was written as a useful note due to lack of comprehensive and straightforward instructions. As we all know, Microsoft is quite huge corp having different dev-teams working separately, thus if people still facing issues with WSL installation since so many years, the underlying cause is related to subproducts isolation and bad cooperation between dev-teams. You'll see for yourself that security team (Windows Defender) and WSL team may have quite bad collaboration during releases, and this guide proves this fact.
 
 Obviously, I am unable to give 100% guarantee that it will work on future WSL and Windows updates, but it worked nicely since 2024 and will work some time ahead.
 
@@ -14,18 +14,18 @@ Obviously, I am unable to give 100% guarantee that it will work on future WSL an
 
 - Windows 11 Pro
 - Windows 10 Pro
-- Windows Defender in any condition (working, disabled or forecefully inhibited forever)
+- Windows Defender in any condition (working, disabled or forcefully inhibited forever by local policy)
 
 This page does not include any files to download, so following this guide will be enough to get positive result on your PC.
 
 ### Errors covered
 
-- 0x80370114 The operation could not be started because a required feature is not installed (but everyhting is installed correctly)
+- 0x80370114 The operation could not be started because a required feature is not installed (but everything is installed correctly)
 - 0x8007019e
 - 0x8000000d
 - and others
 
-This guide is suitable for fresh install or already broken, In case of broken installation, you can undone everithing (uninstall) or just perform all oprations step by step.
+This guide is suitable for fresh install or already broken, In case of broken installation, you can undone everything (uninstall) or just perform all operations step by step.
 
 ## **Step by step guide**
 
@@ -89,18 +89,19 @@ Choose file
 
 Click added file and click **Edit.**
 
-Scroll down a bit to option called **Control folw guard (CFG)**
+Scroll down a bit to option called **Control flow guard (CFG)**
 
 Enable checkbox called **Enable Override System settings**
 
-Switch it into **On** state and enable checkbox **Use srtict CFG**
+Switch it into **On** state and enable checkbox **Use strict CFG**
 
 Add another system executable same way by enabling the "CFG" thing for it:
 
 `c:\windows\system32\vmwp.exe`
 
-**Step 6.** Install/register WSL distribution that suits your liking. Following command is an example of deploying the Ununtu 22.04 LTS:
+**Step 6.** Install/register WSL distribution that suits your liking. Following command is an example of deploying the Ununtu 22.04 LTS:  
+(you may already have downloaded distribution, so just repeat command using your distro name)
 
 `wsl --install -d Ubuntu-22.04`
 
-That's all. Linux system will start without errors and you will see promt for entering user name and password.
+That's all. Linux system will start without errors, and you will see prompt for entering username and password.
