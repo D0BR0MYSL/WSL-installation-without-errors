@@ -99,7 +99,7 @@ Add another system executable same way by enabling the "CFG" thing for it:
 
 `c:\windows\system32\vmwp.exe`
 
-**Step 5.** Install/register WSL distribution that suits your liking. Following command is an example of deploying the Ununtu 22.04 LTS:
+**Step 6.** Install/register WSL distribution that suits your liking. Following command is an example of deploying the Ununtu 22.04 LTS:
 
 `wsl --install -d Ubuntu-22.04`
 
